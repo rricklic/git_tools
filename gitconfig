@@ -1,0 +1,14 @@
+[user]
+	name = Ryan K. Ricklic
+	email = ryankricklic@gmail.com
+[color]
+	ui = true
+[alias]
+	log-line = !git log --pretty=format:\"[%h] %cd - (%cn) %s\"
+	rewind = "!f() { git reset --soft $1 }; f"
+	squash = "!f() { git stash && git rewind $1 && git commit -a && git stash apply && git stash drop }; f"
+	# diff-no-ws = "!f() { git diff -bw } f"
+[log]
+	date = format:%Y%m%d:%H%M%S
+[core]
+	editor = vim
